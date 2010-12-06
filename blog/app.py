@@ -26,6 +26,10 @@ def getAge(d):
 	else:
 		return "%s Months" % (months)
 
+@app.route('/work')
+def work():
+    return render_template('work.html')
+
 @app.route('/suvan')
 def suvan():
 	s = Session()
