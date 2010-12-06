@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script type="text/javascript" src="{{ url_for('static', filename='mediaelement/mediaelement.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='mediaelement/mediaelementplayer.js') }}"></script>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='mediaelement/mediaelementplayer.css') }}" media="screen" />
+{% endblock %}
+
+{% block body %}
+<div class="post">
+	<h3>The Number - Sound.C</h3>
+    <div class="post-controls">May 4, 2010</div>
+	<div class="post-content">
+      <div class="audio-player">
+      <audio type="audio/mp3" controls="controls" preload="none">
+        <source src="{{ url_for('static', filename='tracks/soundc-thenumber.mp3') }}" />
+      </audio>
+      </div>
+      <p>I made this track when we went to the hospital once to get Anamika checked up during our pregnancy, it was going to take around 4 hours and I didn’t really have that much to do. Yes, this track is THAT old. Suvan is now almost a year old.
+
+      This track hasn’t been mixed or leveled up, so go easy on your speakers and on the track. Hope you like it!</p>
+      
+      <p>This is my most recent track.</p>
+      </p>
+	</div>
+</div>
+<div class="post">
+	<h3>Drugs of Choice - Sound.C</h3>
+	<div class="post-content">
+      <div class="audio-player">
+      <audio type="audio/mp3" controls="controls" preload="none">
+        <source src="{{ url_for('static', filename='tracks/soundc-drugsofchoice.mp3') }}" />
+      </audio>
+      </div>
+      <p>I wanted to create more of a euro-progressive track with some psychedelic basslines. I think some of the listeners found the baseline to be a little too high. My monitors don’t really have good lowend, so I feel this track doesn’t sound as warm as I would like. I like it though, a lot of elements mixed together.</p>
+	</div>
+</div>
+<div class="post">
+	<h3>Hard Moon - Sound.C & Omni Vista</h3>
+	<div class="post-content">
+      <div class="audio-player">
+      <audio type="audio/mp3" controls="controls" preload="none">
+        <source src="{{ url_for('static', filename='tracks/soundc-hardmoon.mp3') }}" />
+      </audio>
+      </div>
+      <p>I was experimenting with vocals here. I got the acapella from ccmixter.org. I like it overall, this track also has a lot sounds which I’ve played myself. I am not much of a player so that’s kind of a big deal for me. Hope you like it.</p>
+	</div>
+</div>
+<div class="post">
+	<h3>East River - Sound.C & Kirsten Hersh</h3>
+	<div class="post-content">
+      <div class="audio-player">
+      <audio type="audio/mp3" controls="controls" preload="none">
+        <source src="{{ url_for('static', filename='tracks/soundc-eastriver.mp3') }}" />
+      </audio>
+      </div>
+      <p>This track is by far my favorite. I think I just got lucky with this one. A lot of people liked it too. I think my favorite part about this track is the bassline along with the fake 303 affect which kind of accentuates the bassline at places in a more “grinding” kind of a way. I also love the way snares and hihats come into the track from just plain kick and bass in one of the parts.</p>
+
+	</div>
+</div>
+<script>
+// do NOT put this in the [head] tag or iOS 3.x devices will fail
+jQuery(document).ready(function($) {
+  $('audio').mediaelementplayer({
+    audioWidth: '400',
+    startLanguage:'en',
+    plugins: ['flash','silverlight']
+  });
+});
+</script>
+
+{% endblock %}

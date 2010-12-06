@@ -1,1 +1,7 @@
 The source code for udayv.com
+
+Requirements:
+Python > 2.6.x < 3.0
+Flask
+Flup
+Sqlalchemy

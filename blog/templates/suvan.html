@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script type="text/javascript">
+$(function() {
+	Shadowbox.init({
+		counterType: 'default',
+		overlayOpacity: 0.8
+	});
+});
+</script>
+
+{% endblock %}
+
+{% block body %}
+{% if pictures %}
+{% for p in pictures %}
+	<div class='photo-section'>
+		<h3>{{ p.date }}</h3>
+		<h4>{{ p.age }}</h4>
+		<ul class='slides'>
+		{% for pic in p.pictures %}
+			<li><a rel='shadowbox[Suvan]' href='{{ pic.file_path }}'><img src='{{ pic.file_thumb_path }}' /></a></li>
+		{% endfor %}
+		</ul>
+	</div>
+{% endfor %}
+{% else %}
+	<div class='post'>
+		<h3>No Pictures</h3>
+		<div class="post-content">
+			<p>There are no pictures available at this time.	
+		</div>
+	</div>
+{% endif %}
+{% endblock %}
